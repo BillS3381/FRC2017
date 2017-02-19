@@ -61,25 +61,25 @@ public class RobotMap {
         driveTrainRobotDrive21.setSensitivity(0.5);
         driveTrainRobotDrive21.setMaxOutput(1.0);
 
-        hopperHopperMotor = new Spark(9);
+        hopperHopperMotor = new Spark(0);
         LiveWindow.addActuator("Hopper", "HopperMotor", (Spark) hopperHopperMotor);
         
-        ballPickUpBallPickUpMotor = new Spark(4);
+        ballPickUpBallPickUpMotor = new Spark(1);
         LiveWindow.addActuator("BallPickUp", "BallPickUpMotor", (Spark) ballPickUpBallPickUpMotor);
         
-        ballShooterBallShooterMotor = new Spark(3);
+        ballShooterBallShooterMotor = new Spark(10);
         LiveWindow.addActuator("BallShooter", "BallShooterMotor", (Spark) ballShooterBallShooterMotor);
         
         robotLifterLiftToLimit = new DigitalInput(5);
         LiveWindow.addSensor("RobotLifter", "LiftToLimit", robotLifterLiftToLimit);
         
-        robotLifterLifterMoter = new Spark(2);
+        robotLifterLifterMoter = new Spark(3);
         LiveWindow.addActuator("RobotLifter", "LifterMoter", (Spark) robotLifterLifterMoter);
         
-        gearGate = new Spark(7);
+        gearGate = new Spark(2);
         LiveWindow.addActuator("Gear", "Gate", (Spark) gearGate);
         
-        leftSideLeftPaddle = new Spark(0);
+        leftSideLeftPaddle = new Spark(4);
         LiveWindow.addActuator("LeftSide", "LeftPaddle", (Spark) leftSideLeftPaddle);
         
         leftSideLeftOut = new DigitalInput(1);
@@ -88,7 +88,7 @@ public class RobotMap {
         leftSideLeftIn = new DigitalInput(3);
         LiveWindow.addSensor("LeftSide", "LeftIn", leftSideLeftIn);
         
-        rightSideRightPaddle = new Spark(1);
+        rightSideRightPaddle = new Spark(9);
         LiveWindow.addActuator("RightSide", "RightPaddle", (Spark) rightSideRightPaddle);
         
         rightSideRightOut = new DigitalInput(2);
