@@ -43,9 +43,9 @@ public class CommandDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	Robot.driveTrain.arcadeDrive(Robot.oi.joystick);
-    	SmartDashboard.putNumber("Rotate X",  Robot.oi.joystick.getX() );
-    	SmartDashboard.putNumber("Drive Y", Robot.oi.joystick.getY());
+    	Robot.driveTrain.arcadeDrive(Robot.oi.joystick.getX()*Robot.driveTrain.reverse, Robot.oi.joystick.getY()*Robot.driveTrain.reverse);
+    	SmartDashboard.putNumber("Rotate X",  Robot.oi.joystick2.getX());
+    	SmartDashboard.putNumber("Drive Y", Robot.oi.joystick2.getY());
     	
     }
 
