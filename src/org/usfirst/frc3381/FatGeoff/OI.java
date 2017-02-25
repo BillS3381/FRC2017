@@ -76,9 +76,9 @@ public class OI {
         pickUp.whileHeld(new CommandBallPickUpForward());
         joystick = new Joystick(0);
         
-        pinchGear = new JoystickButton(joystick, 1);
+        pinchGear = new JoystickButton(joystick, 12);
         pinchGear.whileHeld(new Pinch());
-        openGear = new JoystickButton(joystick, 1);
+        openGear = new JoystickButton(joystick, 11);
         openGear.whileHeld(new Open());
         hopperSpinBack = new JoystickButton(joystick, 1);
         hopperSpinBack.whileHeld(new CommandHopperBack());
