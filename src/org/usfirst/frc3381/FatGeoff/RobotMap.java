@@ -38,6 +38,7 @@ public class RobotMap {
     public static DigitalInput robotLifterLiftToLimit;
     public static SpeedController robotLifterLifterMoter;
     public static SpeedController gearGate;
+    public static DigitalInput gearCounter;
     public static SpeedController leftSideLeftPaddle;
     public static DigitalInput leftSideLeftOut;
     public static DigitalInput leftSideLeftIn;
@@ -79,6 +80,9 @@ public class RobotMap {
         
         gearGate = new Spark(2);
         LiveWindow.addActuator("Gear", "Gate", (Spark) gearGate);
+        
+        gearCounter = new DigitalInput(0);
+        LiveWindow.addSensor("Gear", "Counter", gearCounter);
         
         leftSideLeftPaddle = new Spark(4);
         LiveWindow.addActuator("LeftSide", "LeftPaddle", (Spark) leftSideLeftPaddle);
